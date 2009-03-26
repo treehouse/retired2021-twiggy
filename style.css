@@ -1,0 +1,330 @@
+/* CSS Document */
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: block;
+  width: 100%;
+  background: #fff;
+  font-family: verdana;
+  background: #007FC0 url(images/bigger-background.png) repeat-x;
+}
+
+body {
+  background-position: -120px 0;
+}
+
+body.white {
+  background: white !important;
+}
+
+#home {
+  position: relative;
+  padding-bottom: 20px;
+  min-width: 100%;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  padding-top: 20px !important;
+  display: block;
+  margin: 0 auto;
+}
+
+#search {
+  display: block;
+  border-radius: 8px;
+  width: 100px;
+  margin: 20px auto 0 auto;
+  border:none;
+  width: 118px;
+  height: 14px;
+  background: url(images/search.png);
+  padding: 5px;
+  font-style: italic;
+}
+
+#bigsubmit {
+  display: block;
+  width: 51px;
+  height: 51px;
+  margin: 15px auto 0px auto;
+  padding: 0;
+  background: url(images/big-go.png);
+  border: none;
+}
+
+#bigsubmit:hover {
+  background: url(images/big-go-hover.png);
+}
+
+#bigsubmit:active {
+  background: url(images/big-go.png) !important;
+}
+
+.menu {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.menu:hover, #reload:hover {
+  opacity: 0.5 !important;
+}
+
+.menu:active {
+ 
+}
+
+.favourites_button {
+  background: url(images/star.png) no-repeat;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+
+.close_button {
+  background: url(images/close.png) no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.save_button {
+  background: url(images/save.png) no-repeat;
+  margin-left: 5px;
+  opacity: 1;
+}
+
+
+/* Loading */
+
+.loading {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+  background: white;
+}
+
+#navigation {
+  background: #005b8a;
+  height: 26px;
+}
+#navigation .menu {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: auto;
+  top: 6px;
+  float: left !important;
+}
+
+#navigation .home_button {
+  left: 5px;
+  margin-right: 10px;
+  background: url(images/nav-search.png) no-repeat;
+}
+
+#navigation .close_button {
+  right: 0px !important;
+  position: absolute !important;
+}
+
+#searchbar {
+  background: #008bd2;
+  border-top: 1px solid #52b0df;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #9bcfe9;
+  position: relative;
+}
+
+#searchbar span {
+  color: #fff;
+}
+
+#searchbar #reload {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  height: 20px;
+  width: 20px;
+  float: right;
+  background: url(images/refresh.png) no-repeat;
+}
+
+/* List of tweets */
+
+ul.tweet_list {
+  font-family: helvetica;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: white;
+  position: relative;
+}
+
+.tweet_list li {
+  padding: 5px 0;
+  font-size: 12px;
+  display: block;
+  float: left;
+  width: 100%;
+  background: white url(images/tweet_background.png) repeat-x;
+  border-top: 1px solid #fff;
+  position: relative;
+}
+
+.tweet_list li.tweet_first {
+  border-top: none;
+}
+
+.tweet_list li img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.tweet_list li a {
+
+}
+.tweet_list li a.tweet_list {
+  display: block;
+}
+
+.highlight { color: #008bcc; font-weight: bold;}
+
+.tweet_text, a.favourite {
+  font-size: 12px;
+  line-height: 1.5;
+  float: left;
+  display: block;
+  padding: 5px 0 5px 0; 
+  margin: 0;
+  width: 100%;
+}
+.tweet_text {
+  width: 75%;
+  padding: 0 0 0 47px;
+}
+
+.delete {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  height: 15px;
+  width: 15px;
+  display: block;
+  background: url(images/delete.gif) no-repeat;
+}
+
+a.favourite {
+  padding-left: 10px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.favourite_li:hover {
+  background: url(images/favourite_background_hover.png) !important;
+}
+
+.tweet_text a {
+ color: #008bcc;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.time {
+  position: absolute;
+  width: auto;
+  top: 8px;
+  right: 8px;
+  color: #5aaed5;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+#logo-small, #small-search {
+  display: block;
+  float: left;
+  clear: both;
+}
+
+
+#search_again {
+  background: url(images/search-again-background.png);
+  height: 114px;
+  padding-left: 10px;
+}
+
+#search_again img {
+  margin: 0;
+}
+
+#search_again form {
+  float: left;
+  margin: 0;
+}
+
+#research {
+  border-radius: 8px;
+  width: 100px;
+  border:none;
+  width: 118px;
+  height: 14px;
+  background: url(images/search.png);
+  padding: 5px;
+  float: left;
+  font-style: italic
+}
+
+#smallsubmit {
+  padding: 0 8px;
+  margin-left: 5px;
+  width: 35px;
+  height: 35px;
+  float: left;
+  display: block;
+  margin-top: -4px;
+  border: none;
+  background: url(images/small-go.png) no-repeat;
+}
+
+#smallsubmit:hover {
+  background: url(images/small-go-hover.png) no-repeat;
+}
+
+
+/* Dock */
+#dock
+{
+    background: red url(icon_42.png) center left no-repeat;
+    padding-left:48px;
+    line-height:24px;
+    white-space:pre-line;
+    display: block;
+}
+@media all and ( min-height:64px )
+{
+    #dock
+    {
+        background:url(icon_64.png) center left no-repeat;
+        padding-left:68px;
+        height:64px;
+        margin: 0;
+    }
+}

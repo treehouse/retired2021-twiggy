@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<widget dockable="yes">
+  <widgetname>Twiggy</widgetname>
+  <description>A Twitter Search</description>
+  <icon src="icon.png" />
+  <width>240</width>
+  <height>320</height>
+  <author>
+    <name>Elliott Kember, Mike Kus</name>
+  </author>
+  <id>
+    <name>Twiggy</name>
+    <revised>2009-03-23</revised>
+  </id>
+</widget>
