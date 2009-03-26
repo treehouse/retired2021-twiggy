@@ -1,7 +1,7 @@
 // Hi there. Thanks for reading the source!
 
 // Renew the favourites page
-renewFavourites = function(){
+var renewFavourites = function(){
   f = getFavourites();
   var list = $('<ul class="tweet_list" id="favourites_list">');
   $.each(f, function(i, text){
@@ -19,7 +19,7 @@ renewFavourites = function(){
 }
 
 // Perform a search
-search = function(text){
+var search = function(text){
   if(text == ''){text = 'elliottkember'} // hehe - shameless!
   if (typeof(widget) == 'undefined') {
     window.location.hash = text;
@@ -53,13 +53,13 @@ search = function(text){
 };
 
 // Open the search panel
-open_search = function(){
+var open_search = function(){
   $('#navigation, #searchbar, #results, .results-page-only').show();
   $('#favourites, #home, #search_again, .favourites-page-only').hide();
 }
 
 // Open the home panel
-open_home = function(){
+var open_home = function(){
   $('#dock, #favourites, #navigation, #searchbar, #results, #search_again, .results-page-only, .home_button.favourites-page').hide();
   $('#home').show();
   $('#widget_wrapper').show();
@@ -67,7 +67,7 @@ open_home = function(){
 }
 
 // Show favourites panel
-open_favourites = function(){
+var open_favourites = function(){
   $('body').addClass('white');
   $('#home, .results-page-only, .search-page-only, .results_page, #results').hide();
   $('#favourites, .favourites-page-only, .favourites-page').show();

@@ -2,7 +2,7 @@
 // They're stored in the widget runtime. If you like, replace it with the widget system! Yay!
 
 // Check whether the widget is defined!
-get_key = function(key){
+var get_key = function(key){
   if (typeof(widget) != 'undefined'){
     // It's a phone!
     return widget.preferenceForKey(key);
@@ -17,7 +17,7 @@ get_key = function(key){
   }
 }
 
-set_key = function(value, key){
+var set_key = function(value, key){
   if (typeof(widget) != 'undefined'){
     return widget.setPreferenceForKey(value, key)
   }else{
@@ -26,7 +26,7 @@ set_key = function(value, key){
 }
 
 // Add a favourite
-addFavourite = function(query){
+var addFavourite = function(query){
   fs = get_key('favourites');
   fs = fs.replace('|'+query+'|', '|');  // In case it already exists
   fs = fs+query+'|';                    // Concatenate favourite onto the end
@@ -34,14 +34,14 @@ addFavourite = function(query){
 }
 
 // Remove a favourite
-removeFavourite = function(query){
+var removeFavourite = function(query){
   favourites = get_key('favourites');
   favourites = favourites.replace(query+'|', '|');
   return set_key(favourites, 'favourites');
 }
 
 // Get the favourites out
-getFavourites = function(){
+var getFavourites = function(){
   favs = get_key('favourites');
   return favs.split('|');
 }
