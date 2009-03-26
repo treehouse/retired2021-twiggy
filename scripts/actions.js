@@ -21,7 +21,7 @@ renewFavourites = function(){
 // Perform a search
 search = function(text){
   if(text == ''){text = 'elliottkember'} // hehe - shameless!
-  if (window && window.location) {
+  if (typeof(widget) == 'undefined') {
     window.location.hash = text;
   }
   // Swoosh the save button into the favourites button
@@ -36,9 +36,16 @@ search = function(text){
   // Set the query in the title bar
   $('#query').text(text);
   // And propagate!
+  
+  if (typeof(widget) == 'undefined'){
+    number_to_get = 200;
+  }else{
+    number_to_get = 50
+  }
+  
   $('#results_list').empty().tweet({
       avatar_size: 32,
-      count: 50,
+      count: number_to_get,
       query: text,
       loading_text: "Searching Twitter for '"+text+"'"
   });

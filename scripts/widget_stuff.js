@@ -64,7 +64,7 @@ function testMediaQuery(str)
     return ret;
 }
 
-$('document').ready(function(/* load callback */)
+$('document').load(function(/* load callback */)
     {
         if (screen.availWidth < 800)
         {
@@ -75,7 +75,7 @@ $('document').ready(function(/* load callback */)
         }
         if( 'undefined'==typeof(widget) )widget = {setPreferenceForKey:function(){},preferenceForKey:function(){}};
     }
-)
+);
 
 if (typeof(widget) != 'undefined'){
   /* This should work on load */
@@ -94,10 +94,7 @@ if (typeof(widget) != 'undefined'){
     );
 
   /* This should work, but seems not to. */
-  widget.addEventListener(
-      "widgetmodechange",
-      function(/* widgetmodechange callback */)
-      {
+  widget.addEventListener("widgetmodechange",function(/* widgetmodechange callback */){
           if (this.widgetMode=="docked")
           {
               $('body').removeClass('small');
