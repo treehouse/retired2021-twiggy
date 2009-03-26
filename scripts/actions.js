@@ -1,4 +1,4 @@
-// Hi there. Thanks for reading the source.
+// Hi there. Thanks for reading the source!
 
 // Renew the favourites page
 renewFavourites = function(){
@@ -39,6 +39,7 @@ search = function(text){
       query: text,
       loading_text: "Searching Twitter for '"+text+"'"
   });
+  return false;
 };
 
 // Open the search panel
@@ -62,13 +63,13 @@ open_favourites = function(){
 }
 
 $('document').ready(function(){
-  
+
   // Close button
   $('.close_button').click(function(){window.close(); return false});
   
   // Add search methods
-  $('#small-search').submit(function(){ return search($('#research').val()  )});
-  $('#main-search').submit( function(){ return search($('#search').val()    )});
+  $('#small-search').submit(function(){ search($('#research').val()  )  ; return false });
+  $('#main-search').submit( function(){ search($('#search').val()    )  ; return false ; return false});
 
   // Reload button
   $('#reload').click(function(){return search($('#query').text())});

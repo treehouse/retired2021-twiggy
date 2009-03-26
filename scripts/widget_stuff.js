@@ -69,7 +69,7 @@ $('document').ready(function(/* load callback */)
         if (screen.availWidth < 800)
         {
             window.moveTo(0, 0);
-            $('body').addClass('small');
+            // $('body').addClass('small');
             window.resizeTo(screen.availWidth, screen.availHeight);
             window.scrollTo(0,0);
         }

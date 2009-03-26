@@ -1,5 +1,7 @@
 /* CSS Document */
 
+*{outline: none;}
+
 html, body {
   padding: 0;
   margin: 0;
