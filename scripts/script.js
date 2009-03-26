@@ -347,7 +347,6 @@ $('document').ready(function(/* load callback */)
         if (screen.availWidth < 800)
         {
             window.moveTo(0, 0);
-            $('body').addClass('small');
             window.resizeTo(screen.availWidth, screen.availHeight);
             window.scrollTo(0,0);
         }
@@ -362,7 +361,6 @@ function(/* load callback */)
         if (screen.availWidth < 800)
         {
             window.moveTo(0, 0);
-            $('body').addClass('small');
             window.resizeTo(screen.availWidth, screen.availHeight);
             window.scrollTo(0,0);
         }
@@ -377,12 +375,13 @@ widget.addEventListener
     {
         if (this.widgetMode=="docked")
         {
-            $('body').removeClass('small');
+            $('body').addClass('small');
             $("#dock").show();
             $("#widget_wrapper").hide();
         }
         else
         {
+            $('body').removeClass('small');
             $("#dock").hide();
             $("#widget_wrapper").show();
         }

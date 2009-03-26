@@ -1,5 +1,7 @@
 /* CSS Document */
 
+* { outline: none; }
+
 html, body {
   padding: 0;
   margin: 0;
@@ -310,11 +312,14 @@ a.favourite {
 
 
 /* Dock */
+body.small {
+  background: #00689e;
+}
 #dock
 {
-    background: red url(icon_42.png) center left no-repeat;
+    background: red url(icon_48.png) center left no-repeat;
     padding-left:48px;
-    line-height:24px;
+    line-height:48px;
     white-space:pre-line;
     display: block;
 }
