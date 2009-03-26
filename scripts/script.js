@@ -355,8 +355,7 @@ $('document').ready(function(/* load callback */)
 )
 
 /* This should work on load */
-widget.addEventListener('resolution')
-function(/* load callback */)
+widget.addEventListener('resolution', function(/* load callback */)
     {
         if (screen.availWidth < 800)
         {
@@ -366,12 +365,10 @@ function(/* load callback */)
         }
         if( 'undefined'==typeof(widget) )widget = {setPreferenceForKey:function(){},preferenceForKey:function(){}};
     }
+  )
 
 /* This should work, but seems not to. */
-widget.addEventListener
-(
-    "widgetmodechange",
-    function(/* widgetmodechange callback */)
+widget.addEventListener("widgetmodechange", function(/* widgetmodechange callback */)
     {
         if (this.widgetMode=="docked")
         {
