@@ -66,9 +66,13 @@ open_favourites = function(){
 
 $('document').ready(function(){
 
-  // Close button
-  $('.close_button').click(function(){window.close(); return false});
-  
+
+  if (typeof(widget) == 'undefined'){
+    $('.close_button').remove();
+  }else{
+    // Close button
+    $('.close_button').click(function(){window.close(); return false});
+  }
   // Add search methods
   $('#small-search').submit(function(){ search($('#research').val()  )  ; return false });
   $('#main-search').submit( function(){ search($('#search').val()    )  ; return false ; return false});
