@@ -53,6 +53,7 @@ open_home = function(){
   $('#dock, #favourites, #navigation, #searchbar, #results, #search_again, .results-page-only, .home_button.favourites-page').hide();
   $('#home').show();
   $('#widget_wrapper').show();
+  $('#search').focus();
 }
 
 // Show favourites panel
@@ -79,6 +80,7 @@ $('document').ready(function(){
     $('body').removeClass('white');
     $('#search_again').show();
     $('#navigation, #searchbar').hide();
+    $('#research').focus();
   });
   
   // Home button on favourites page
@@ -112,5 +114,6 @@ $('document').ready(function(){
   
   // Let's rock and roll!
   open_home();
+  $('#search').focus();
   renewFavourites();
 });
