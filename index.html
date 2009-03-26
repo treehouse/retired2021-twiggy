@@ -3,31 +3,28 @@
 <html>
   <head>
     <title>Twiggy</title>
+    <!-- This is for the Opera Widget Emulator. -->
     <script type="text/javascript">if(window.parent&&parent.emulator)parent.emulator.begin(window)</script>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/jquery-big.js"></script>
+    <script type="text/javascript" src="scripts/actions.js"></script>
+    <script type="text/javascript" src="scripts/favourites.js"></script>
+    <script type="text/javascript" src="scripts/twitter.js"></script>
+    <script type="text/javascript" src="scripts/widget_stuff.js"></script>
     <script type="text/javascript" src="scripts/highlight.js"></script>
-    <script type="text/javascript">
-      var isHandheld = testMediaQuery("handheld"); // boolean   
-      var minWidth = 240;
-      var minHeight = 220;
-      if ( isHandheld )
-      {
-          var width = Math.max( minWidth, screen.availWidth );
-          var height = Math.max( minHeight, screen.availHeight );
-          window.resizeTo( width, height ); // perform resizing
-      }
-    </script>
-    <script src="/tweet/jquery.tweet.js" type="text/javascript"></script>
   </head>
   
   <body>
+    <!-- This is the panel for "docked" mode -->
     <div id="dock"></div>
     
+    
+    <!-- This part is for "undocked" mode -->
     <div id="widget_wrapper">
+      <!-- Home panel -->
       <div id="home">
         <a href="#none-favourites" id="home_favourites_button" class="menu favourites_button"></a>
-        <a href="#none-favourites" id="home_close_button" class="menu close_button"></a>      
+        <a href="#none-favourites" id="home_close_button"       class="menu close_button"></a>      
         <img id="logo" src="images/logo.png" alt="Logo">
         <form id="main-search" class="panel" action="#none">
           <div>
@@ -38,26 +35,31 @@
       </div>
     
     
+      <!-- header navigation for results and favourites -->
       <div id="navigation" class="favourites-page results-page">
-        <a href="#none-home-link" id="results_home_button" class="menu home_button results-page"></a>
-        <a href="#none-home-link" id="favourites_home_button" class="menu home_button favourites-page"></a>
+
+        <a href="#none-home-link"  id="results_home_button"       class="menu home_button       results-page-only"></a>
+        <a href="#none-home-link"  id="favourites_home_button"    class="menu home_button       favourites-page-only"></a>
       
         <a href="#none-favourites" id="results_favourites_button" class="menu favourites_button results-page-only"></a>
-        <a href="#none-favourites" id="results_save_button" class="menu save_button results-page-only"></a>
+        <a href="#none-favourites" id="results_save_button"       class="menu save_button       results-page-only"></a>
       
-        <a href="#none-close" id="results_close_button" class="menu close_button"></a>
+        <a href="#none-close"       id="results_close_button"     class="menu close_button"></a>
+
       </div>
+      
+      <!-- Searchbar, showing "Search: elliottkember" or "Favourites" -->
       <div id="searchbar" class="favourites-page">
-        <div class="results-page search-page-only">
+        <div class="results-page-only">
           Search: <span id="query"></span>
           <a href="#none-reload" id="reload"></a>
         </div>
-        <div class="favourites-page favourites-page-only">
+        <div class="favourites-page-only">
           Favourites:
         </div>
       </div>
     
-    
+      <!-- results panel -->
       <div id="results" class="panel">
         <div id="search_again">
           <img id="logo-small" src="images/search-again-logo.png" alt="Small Twiggy logo">
@@ -72,12 +74,14 @@
         <div class="tweet" id="results_list"></div>
       </div>
       
+      <!-- Favourites panel -->
       <div id="favourites" class="panel">
-        
       </div>
       
-      
     </div>
+    
+    
+    
   </body>
 </html>
 

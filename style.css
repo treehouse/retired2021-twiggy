@@ -1,7 +1,5 @@
 /* CSS Document */
 
-* { outline: none; }
-
 html, body {
   padding: 0;
   margin: 0;
@@ -12,16 +10,14 @@ body {
   width: 100%;
   background: #fff;
   font-family: verdana;
-  background: #007FC0 url(images/bigger-background.png) repeat-x;
-}
-
-body {
-  background-position: -120px 0;
+  background: #007FC0 url(images/bigger-background.png) -120px 0 repeat-x;
 }
 
 body.white {
   background: white !important;
 }
+
+/* Home panel */
 
 #home {
   position: relative;
@@ -40,13 +36,12 @@ body.white {
 #search {
   display: block;
   border-radius: 8px;
-  width: 100px;
   margin: 20px auto 0 auto;
+  padding: 5px;
   border:none;
   width: 118px;
   height: 14px;
   background: url(images/search.png);
-  padding: 5px;
   font-style: italic;
 }
 
@@ -68,6 +63,8 @@ body.white {
   background: url(images/big-go.png) !important;
 }
 
+/* Menu buttons */
+
 .menu {
   display: block;
   width: 20px;
@@ -77,10 +74,6 @@ body.white {
 
 .menu:hover, #reload:hover {
   opacity: 0.5 !important;
-}
-
-.menu:active {
- 
 }
 
 .favourites_button {
@@ -104,7 +97,7 @@ body.white {
 }
 
 
-/* Loading */
+/* Loading box */
 
 .loading {
   text-align: center;
@@ -117,10 +110,13 @@ body.white {
   background: white;
 }
 
+/* Nav bar */
+
 #navigation {
   background: #005b8a;
   height: 26px;
 }
+
 #navigation .menu {
   display: block;
   position: relative;
@@ -150,6 +146,8 @@ body.white {
   color: #9bcfe9;
   position: relative;
 }
+
+/* This shows the query */
 
 #searchbar span {
   color: #fff;
@@ -198,52 +196,38 @@ ul.tweet_list {
   top: 8px;
   left: 8px;
 }
-.tweet_list li a {
-
-}
-.tweet_list li a.tweet_list {
-  display: block;
-}
-
-.highlight { color: #008bcc; font-weight: bold;}
 
 .tweet_text, a.favourite {
   font-size: 12px;
   line-height: 1.5;
   float: left;
   display: block;
-  padding: 5px 0 5px 0; 
   margin: 0;
-  width: 100%;
 }
+
 .tweet_text {
   width: 75%;
   padding: 0 0 0 47px;
 }
 
-.delete {
-  position: absolute;
-  right: 10px;
-  top: 13px;
-  height: 15px;
-  width: 15px;
-  display: block;
-  background: url(images/delete.gif) no-repeat;
-}
-
 a.favourite {
-  padding-left: 10px;
+  width: 60%;
+  padding: 5px 0 5px 10px; 
   color: #000;
   text-decoration: none;
   font-weight: bold;
 }
 
-.favourite_li:hover {
-  background: url(images/favourite_background_hover.png) !important;
+.tweet_text a, .highlight {
+  color: #008bcc;
 }
 
-.tweet_text a {
- color: #008bcc;
+.tweet_list li a:hover, .tweet_list li .tweet_text a:hover * {
+  color: #000 !important;
+}
+
+.highlight {
+  font-weight: bold;
 }
 
 .username {
@@ -253,19 +237,34 @@ a.favourite {
 .time {
   position: absolute;
   width: auto;
-  top: 8px;
+  top: 9px;
   right: 8px;
   color: #5aaed5;
   text-decoration: none;
   font-size: 10px;
 }
 
+.delete {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  height: 25px;
+  width: 25px;
+  display: block;
+  background: url(images/delete.gif) no-repeat 5px 5px;
+}
+
+.favourite_li:hover {
+  background: url(images/favourite_background_hover.png) !important;
+}
+
+/* Search again form */
+
 #logo-small, #small-search {
   display: block;
   float: left;
   clear: both;
 }
-
 
 #search_again {
   background: url(images/search-again-background.png);
@@ -311,7 +310,7 @@ a.favourite {
 }
 
 
-/* Dock */
+/* Docked version of app */
 body.small {
   background: #00689e;
 }
