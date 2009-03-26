@@ -77,37 +77,39 @@ $('document').ready(function(/* load callback */)
     }
 )
 
-/* This should work on load */
-widget.addEventListener('resolution')
-function(/* load callback */)
-    {
-        if (screen.availWidth < 800)
-        {
-            window.moveTo(0, 0);
-            $('body').addClass('small');
-            window.resizeTo(screen.availWidth, screen.availHeight);
-            window.scrollTo(0,0);
-        }
-        if( 'undefined'==typeof(widget) )widget = {setPreferenceForKey:function(){},preferenceForKey:function(){}};
-    }
+if (typeof(widget) != 'undefined'){
+  /* This should work on load */
+  widget.addEventListener('resolution', 
+  function(/* load callback */)
+      {
+          if (screen.availWidth < 800)
+          {
+              window.moveTo(0, 0);
+              $('body').addClass('small');
+              window.resizeTo(screen.availWidth, screen.availHeight);
+              window.scrollTo(0,0);
+          }
+          if( 'undefined'==typeof(widget) )widget = {setPreferenceForKey:function(){},preferenceForKey:function(){}};
+      }
+    );
 
-/* This should work, but seems not to. */
-widget.addEventListener
-(
-    "widgetmodechange",
-    function(/* widgetmodechange callback */)
-    {
-        if (this.widgetMode=="docked")
-        {
-            $('body').removeClass('small');
-            $("#dock").show();
-            $("#widget_wrapper").hide();
-        }
-        else
-        {
-            $("#dock").hide();
-            $("#widget_wrapper").show();
-        }
-    },
-    false
-)
+  /* This should work, but seems not to. */
+  widget.addEventListener(
+      "widgetmodechange",
+      function(/* widgetmodechange callback */)
+      {
+          if (this.widgetMode=="docked")
+          {
+              $('body').removeClass('small');
+              $("#dock").show();
+              $("#widget_wrapper").hide();
+          }
+          else
+          {
+              $("#dock").hide();
+              $("#widget_wrapper").show();
+          }
+      },
+      false
+  ));
+}

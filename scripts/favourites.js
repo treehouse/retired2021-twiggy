@@ -11,7 +11,7 @@ get_key = function(key){
     c = $.cookie(key);
     if (c == null){
       $.cookie(key, '');
-      return('');
+      return '';
     }
     return c;
   }
@@ -42,6 +42,6 @@ removeFavourite = function(query){
 
 // Get the favourites out
 getFavourites = function(){
-  var favs = get_key('favourites');
+  favs = get_key('favourites');
   return favs.split('|');
 }

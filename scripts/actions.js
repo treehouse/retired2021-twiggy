@@ -20,6 +20,8 @@ renewFavourites = function(){
 
 // Perform a search
 search = function(text){
+  if(text == ''){text = 'elliottkember'} // hehe - shameless!
+  window.location.hash = text;
   // Swoosh the save button into the favourites button
   $('.save_button').animate({ 
     marginLeft: "5",
@@ -27,7 +29,6 @@ search = function(text){
   }, 0);
   // Make the body background white
   $('body').addClass('white');
-  if(text == ''){text = 'elliottkember'} // hehe - shameless!
   // Open the search panel
   open_search();
   // Set the query in the title bar
@@ -111,9 +112,16 @@ $('document').ready(function(){
    removeFavourite(query);
    $(this).parent().fadeOut();
   });
+
+  renewFavourites();  
+  open_home(); // required to hide the dock
+
+  if (window.location.hash && window.location.hash != '#none'){
+    query = window.location.hash.replace('#', '');
+    search(query)
+  }else{
+    $('#search').focus();
+  }
   
-  // Let's rock and roll!
-  open_home();
-  $('#search').focus();
-  renewFavourites();
+  
 });
