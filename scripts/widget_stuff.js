@@ -108,5 +108,5 @@ if (typeof(widget) != 'undefined'){
           }
       },
       false
-  ));
+  );
 }
