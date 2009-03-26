@@ -222,6 +222,7 @@ a.favourite {
 
 .tweet_text a, .highlight {
   color: #008bcc;
+  text-decoration: none;
 }
 
 .tweet_list li a:hover, .tweet_list li .tweet_text a:hover * {
