@@ -21,7 +21,9 @@ renewFavourites = function(){
 // Perform a search
 search = function(text){
   if(text == ''){text = 'elliottkember'} // hehe - shameless!
-  window.location.hash = text;
+  if (window && window.location) {
+    window.location.hash = text;
+  }
   // Swoosh the save button into the favourites button
   $('.save_button').animate({ 
     marginLeft: "5",
@@ -66,13 +68,13 @@ open_favourites = function(){
 
 $('document').ready(function(){
 
-
   if (typeof(widget) == 'undefined'){
     $('.close_button').remove();
   }else{
     // Close button
     $('.close_button').click(function(){window.close(); return false});
   }
+
   // Add search methods
   $('#small-search').submit(function(){ search($('#research').val()  )  ; return false });
   $('#main-search').submit( function(){ search($('#search').val()    )  ; return false ; return false});
