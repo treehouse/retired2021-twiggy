@@ -363,7 +363,7 @@ function(/* load callback */)
         {
             window.moveTo(0, 0);
             $('body').addClass('small');
-            //window.resizeTo(screen.availWidth, screen.availHeight);
+            window.resizeTo(screen.availWidth, screen.availHeight);
             window.scrollTo(0,0);
         }
         if( 'undefined'==typeof(widget) )widget = {setPreferenceForKey:function(){},preferenceForKey:function(){}};
