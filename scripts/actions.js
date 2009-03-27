@@ -38,7 +38,7 @@ var search = function(text){
   // And propagate!
   
   if (typeof(widget) == 'undefined'){
-    number_to_get = 20;
+    number_to_get = 50;
   }else{
     number_to_get = 50
   }
