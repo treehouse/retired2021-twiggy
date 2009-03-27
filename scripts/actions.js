@@ -49,7 +49,7 @@ var search = function(text){
       query: text,
       loading_text: "Searching Twitter for '"+text+"'"
   });
-  setTimeout("$('#results_list ul.deleteme').remove();", 1000);
+  setTimeout("$('#results_list ul.deleteme').remove();", 100);
   return false;
 };
 

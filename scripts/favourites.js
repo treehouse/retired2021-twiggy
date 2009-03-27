@@ -28,7 +28,7 @@ var set_key = function(value, key){
 // Add a favourite
 var addFavourite = function(query){
   fs = get_key('favourites');
-  fs = fs.replace('|'+query+'|', '|');  // In case it already exists
+  fs = fs.replace('|'+query, '|');  // In case it already exists
   fs = fs+query+'|';                    // Concatenate favourite onto the end
   return set_key(fs, 'favourites')
 }
