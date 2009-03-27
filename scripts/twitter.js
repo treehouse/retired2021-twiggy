@@ -91,7 +91,7 @@
 
     if(o) $.extend(s, o);
     return this.each(function(){
-      var list = $('<ul class="tweet_list">').appendTo(this);
+      var list = $('<ul id="tweet_results" class="tweet_list">').appendTo(this);
       var intro = '<p class="tweet_intro">'+s.intro_text+'</p>'
       var outro = '<p class="tweet_outro">'+s.outro_text+'</p>'
       var loading = $('<p class="loading">'+s.loading_text+'</p>');

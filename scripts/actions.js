@@ -38,17 +38,18 @@ var search = function(text){
   // And propagate!
   
   if (typeof(widget) == 'undefined'){
-    number_to_get = 200;
+    number_to_get = 20;
   }else{
     number_to_get = 50
   }
-  
-  $('#results_list').empty().tweet({
+  $('#results_list ul').addClass('deleteme');
+  $('#results_list').tweet({
       avatar_size: 32,
       count: number_to_get,
       query: text,
       loading_text: "Searching Twitter for '"+text+"'"
   });
+  setTimeout("$('#results_list ul.deleteme').remove();", 1000);
   return false;
 };
 
@@ -84,7 +85,7 @@ $('document').ready(function(){
 
   // Add search methods
   $('#small-search').submit(function(){ search($('#research').val()  )  ; return false });
-  $('#main-search').submit( function(){ search($('#search').val()    )  ; return false ; return false});
+  $('#main-search').submit( function(){ search($('#search').val()    )  ; return false });
 
   // Reload button
   $('#reload').click(function(){return search($('#query').text())});
@@ -129,7 +130,7 @@ $('document').ready(function(){
   renewFavourites();  
   open_home(); // required to hide the dock
 
-  if (window.location.hash && window.location.hash != '#none'){
+  if (window.location.hash && window.location.hash != '#'){
     query = window.location.hash.replace('#', '');
     search(query)
   }else{

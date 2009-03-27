@@ -1,6 +1,7 @@
 /* CSS Document */
 
-*{outline: none;}
+*{outline: none !important;}
+input::-moz-focus-inner { border: 0 !important; }
 
 html, body {
   padding: 0;
@@ -17,6 +18,10 @@ body {
 
 body.white {
   background: white !important;
+}
+
+.deleteme {
+  display: none;
 }
 
 /* Home panel */
