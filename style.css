@@ -33,11 +33,16 @@ body.white {
 }
 
 #logo {
+  display: block;
   width: 100px;
   height: 100px;
-  padding-top: 20px !important;
   display: block;
   margin: 0 auto;
+}
+
+#logo img {
+  margin-top: 15px;
+  margin-left: -2px;
 }
 
 #search {
